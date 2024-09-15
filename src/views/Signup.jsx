@@ -1,8 +1,16 @@
 import { Avatar, Button, Container, Heading, Input, Text, VStack } from '@chakra-ui/react'
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
-const Signup = () => {
+const Signup = ({ setProgress }) => {
+
+    useEffect(() => {
+        setProgress(40)
+        setTimeout(() => {
+            setProgress(100)
+        }, 750)
+    }, [])
+
     return (
         <Container maxW={'container.xl'} h={'100vh'} p={'10'}>
             <form >

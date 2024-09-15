@@ -1,7 +1,16 @@
 import { Container, HStack, VStack, Button, Input } from '@chakra-ui/react'
+import { useEffect } from 'react'
 import { AiOutlineCloudUpload } from 'react-icons/ai'
 
-const Upload = () => {
+const Upload = ({ setProgress }) => {
+
+    useEffect(() => {
+        setProgress(40)
+        setTimeout(() => {
+            setProgress(100)
+        }, 750)
+    }, [])
+
     return (
         <Container maxW={'container.xl'} h={'100vh'} p={'16'}>
             <VStack color={'purple.500'} h={'full'} justifyContent={'center'}>

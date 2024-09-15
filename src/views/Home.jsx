@@ -1,5 +1,5 @@
 import { Box, Container, Heading, Stack, Image, Text } from '@chakra-ui/react'
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Carousel } from 'react-responsive-carousel'
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import img1 from '../assets/1.jpg'
@@ -15,40 +15,48 @@ const headingOptions = {
     transform: "translate(-50%, -50%)",
     textTransform: "uppercase",
     p: '4',
-    size: '4xl',
+    size: ['xl', '4xl'],
     w: '60%',
     backdropFilter: 'blur(10px)'
 }
 
 
-const Home = () => {
+const Home = ({ setProgress }) => {
+
+    useEffect(() => {
+        setProgress(40)
+        setTimeout(() => {
+            setProgress(100)
+        }, 750)
+    }, [])
+
     return (
         <Box>
             {/* Carousel */}
             <Carousel autoPlay infiniteLoop interval={2000} showArrows={false} showThumbs={false} showStatus={false}>
                 <Box w={'full'} h={'100vh'} >
-                    <img src={img1} />
+                    <Image src={img1} h={'full'} w={'full'} objectFit={'cover'} />
                     <Heading bgColor={'blackAlpha.600'} color={'white'} {...headingOptions}>
                         Watch The Future
                     </Heading>
                 </Box>
 
                 <Box w={'full'} h={'100vh'} >
-                    <img src={img2} />
+                    <Image src={img2} h={'full'} w={'full'} objectFit={'cover'} />
                     <Heading bgColor={'whiteAlpha.300'} color={'blackAlpha.700'} {...headingOptions}>
                         Future is Gaming
                     </Heading>
                 </Box>
 
                 <Box w={'full'} h={'100vh'} >
-                    <img src={img3} />
+                    <Image src={img3} h={'full'} w={'full'} objectFit={'cover'} />
                     <Heading bgColor={'blackAlpha.600'} color={'white'} {...headingOptions}>
                         Gaming on Console
                     </Heading>
                 </Box>
 
                 <Box w={'full'} h={'100vh'} >
-                    <img src={img4} />
+                    <Image src={img4} h={'full'} w={'full'} objectFit={'cover'} />
                     <Heading bgColor={'blackAlpha.600'} color={'white'} {...headingOptions}>
                         Explore the Night
                     </Heading>

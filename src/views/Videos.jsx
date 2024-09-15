@@ -1,8 +1,15 @@
 import { Heading, Stack, VStack, Text, Button } from '@chakra-ui/react'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import videos from '../components/VideosArray'
 
-const Videos = () => {
+const Videos = ({ setProgress }) => {
+
+    useEffect(() => {
+        setProgress(40)
+        setTimeout(() => {
+            setProgress(100)
+        }, 750)
+    }, [])
 
     const [videoSrc, setVideoSrc] = useState(videos[0].src)
     const [title, setTitle] = useState(Object.values(videos[0].title))
