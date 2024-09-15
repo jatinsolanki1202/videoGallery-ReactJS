@@ -37,6 +37,10 @@ const Videos = ({ setProgress }) => {
                         <Button variant={'solid'} colorScheme={'purple'} px={'2'} py={'4'} onClick={() => {
                             setVideoSrc(video.src)
                             setTitle(video.title)
+                            setProgress(40)
+                            setTimeout(() => {
+                                setProgress(100)
+                            }, 750)
                         }} key={index} overflow={'hidden'}>
                             {video.title}
                         </Button>
