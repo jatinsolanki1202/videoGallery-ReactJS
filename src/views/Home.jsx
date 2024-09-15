@@ -29,7 +29,7 @@ const Home = () => {
                 <Box w={'full'} h={'100vh'} >
                     <img src={img1} />
                     <Heading bgColor={'blackAlpha.600'} color={'white'} {...headingOptions}>
-                        Watch The Future.
+                        Watch The Future
                     </Heading>
                 </Box>
 
