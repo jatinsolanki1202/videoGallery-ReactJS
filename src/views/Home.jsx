@@ -11,7 +11,7 @@ import img5 from '../assets/5.png'
 const headingOptions = {
     pos: "absolute",
     left: "50%",
-    top: "50%",
+    top: ["65%", "50%"],
     transform: "translate(-50%, -50%)",
     textTransform: "uppercase",
     p: '4',
@@ -34,28 +34,28 @@ const Home = ({ setProgress }) => {
         <Box>
             {/* Carousel */}
             <Carousel autoPlay infiniteLoop interval={2000} showArrows={false} showThumbs={false} showStatus={false}>
-                <Box w={'full'} h={'100vh'} >
+                <Box w={'full'} h={['80vh', '100vh']} >
                     <Image src={img1} h={'full'} w={'full'} objectFit={'cover'} />
                     <Heading bgColor={'blackAlpha.600'} color={'white'} {...headingOptions}>
                         Watch The Future
                     </Heading>
                 </Box>
 
-                <Box w={'full'} h={'100vh'} >
+                <Box w={'full'} h={['80vh', '100vh']} >
                     <Image src={img2} h={'full'} w={'full'} objectFit={'cover'} />
                     <Heading bgColor={'whiteAlpha.300'} color={'blackAlpha.700'} {...headingOptions}>
                         Future is Gaming
                     </Heading>
                 </Box>
 
-                <Box w={'full'} h={'100vh'} >
+                <Box w={'full'} h={['80vh', '100vh']} >
                     <Image src={img3} h={'full'} w={'full'} objectFit={'cover'} />
                     <Heading bgColor={'blackAlpha.600'} color={'white'} {...headingOptions}>
                         Gaming on Console
                     </Heading>
                 </Box>
 
-                <Box w={'full'} h={'100vh'} >
+                <Box w={'full'} h={['80vh', '100vh']} >
                     <Image src={img4} h={'full'} w={'full'} objectFit={'cover'} />
                     <Heading bgColor={'blackAlpha.600'} color={'white'} {...headingOptions}>
                         Explore the Night
