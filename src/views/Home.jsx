@@ -66,7 +66,7 @@ const Home = ({ setProgress }) => {
 
 
             {/* Container */}
-            <Container minH={'100vh'} p={'16'} maxW={'container.lg'}>
+            <Container minH={'100vh'} p={['8', '16']} maxW={'container.lg'}>
                 <Heading textTransform={'uppercase'} py={'2'} w={'fit-content'} borderBottom={'2px solid'} m={'auto'}>
                     Services
                 </Heading>
